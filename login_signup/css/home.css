@@ -1,0 +1,58 @@
+#scroller {
+	
+	height: 650px;
+	width: 100%; 
+	left: 0;
+	margin: 0 auto;
+	position: relative;
+}
+
+#scroller div {
+
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+ 	top: 0;
+	left: 0;
+	z-index: 8;
+	opacity: 1.0;	
+	background-repeat: no-repeat;
+	background-position: center;
+		
+}
+#scroller .space {
+		background-image: url("https://cdn3.f-cdn.com/build/css/abtests/20151005/images/hero-images/nasa.jpg?v=a54bdfa5eddf51200841cf6f1e825a0f&amp;m=6");
+		min-height: 100%;
+		min-width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+}
+
+#scroller .e1 {
+
+		background-image: url("https://cdn3.f-cdn.com/build/css/abtests/20151005/images/hero-images/fantasy-book-cover.jpg?v=63c321a0a664024648fc6f7ac27443d2&amp;m=6");
+		min-height: 100%;
+		min-width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+}
+#scroller .e2 {
+		background-image: url("https://cdn3.f-cdn.com/build/css/abtests/20151005/images/hero-images/nasa.jpg?v=a54bdfa5eddf51200841cf6f1e825a0f&amp;m=6");
+		min-height: 100%;
+		min-width: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+
+}
+
+#scroller div.active {
+
+	z-index: 10;
+	opacity: 1;
+}
+
+#scroller div.last-active {
+
+	z-index: 9;
+}

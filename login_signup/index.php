@@ -7,23 +7,34 @@
     
     <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
-        <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.image_scroll.min.js"></script>
 
 
     <link rel="stylesheet" href="css/normalize.css">
-
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+  
   </head>
   <body>
 
     <div class = "container">
+    	<!--  Image scroller !-->
+    	<div id="scroller">
+    	    	<div class = "space active"></div>
+    	    	<div class = "e1"></div>
+    	    	<div class = "e2"></div>
+    	    	
+					
+    	    	
+    	</div>
     
 <a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a>
-<!-- Popup overlay --!>
+
+<!-- Popup overlay !-->
 <div id="modal" class="popupContainer" style="display:none;">
-<section class="popupBody">
+  <section class="popupBody">
     <div class="logmod">
   <div class="logmod__wrapper">
     <span class="logmod__close">Close</span>
@@ -134,13 +145,12 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 
     <script src="js/index.js"></script>
 
     <script type="text/javascript">
   		$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".logmod__close" });
-    
   </script>    
     </section>
     </div>
