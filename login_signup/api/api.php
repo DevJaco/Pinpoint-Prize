@@ -10,7 +10,7 @@ header("content-type:application/json");
 header("access-allow-control-origin: *");
 
 $api = new API();
-$api->login_construct()
+$api->login_construct();
 
 class API {
 	
@@ -173,14 +173,17 @@ private function signup($email, $password, $repeat_pass){
 		
 			if(hash_equals($hash, $rep_hash) === true){
 	
-				$new_user = $this->db->query("INSERT INTO " .self::TBL_NAME. " (email, password, confirm) VALUES ('".$email."' , '".$hash."', FALSE);");
+				$new_user = $this->db->prepare("INSERT INTO " .self::TBL_NAME. " (email, password, confirm) VALUES (?, ?, FALSE);");
 				//var_dump($this->db);
-	
-					if($this->db->errno > 0){
+				$type = 'ss';
+				$new_user->bind_param($type, $email, $hash);
+				$new_user->execute();					
+				
+					if($new_user->errno > 0){
 	
 						//echo $this->db->error;
 		
-						if($this->db->errno == 1062){
+						if($new_user->errno == 1062){
 							json("Sorry that username is taken");
 		
 							}
@@ -217,12 +220,17 @@ private function signup($email, $password, $repeat_pass){
 	
 private function login($email, $password){
 	
-		$users = $this->db->query("SELECT * FROM " . self::TBL_NAME. " WHERE email='".$email."' LIMIT 1;");
-		$send_user = $users->fetch_object();
-	
+		$user_query = $this->db->prepare("SELECT * FROM tblUsers WHERE email=?;");
+		$types = 's';
+		$user_query->bind_param($types, $email);
+		$user_query->execute();
+		
+		$send_user = $user_query->get_result();
+		
 		if($send_user != NULL){
 			
-				if($users->num_rows === 1){
+				if($send_user->num_rows === 1){
+				$send_user = $send_user->fetch_object();
 					$expected = trim($send_user->password);
 					$correct = trim(crypt($password, $send_user->password));
 
@@ -235,12 +243,14 @@ private function login($email, $password){
 
 								if(isset($_SESSION['json'])){
 									if($this->isAjax()) {
+										$_SESSION['uid'] = $send_user->id;
 										$loc = array("location" => "http://localhost/login_signup/login_success.php");
 										json($loc);
 
         			
     								} 
     								else {
+    									$_SESSION['uid'] = $send_user->id;
        		 							header("Location: index.php");
     				 	}
 					}	
