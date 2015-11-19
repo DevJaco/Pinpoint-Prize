@@ -26,6 +26,7 @@ html {
   display: block;
   background: #FFF;
   position: relative;
+  top: -20px;
   max-width: 550px;
   border-radius: 4px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
@@ -580,7 +581,7 @@ html {
   width: 59%;
   height: 1px;
   bottom: 0px;
-  left: 41px;
+  left: 45px;
   background: #f00;
   visibility: hidden;
   transform: scaleX(0);

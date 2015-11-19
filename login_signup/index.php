@@ -10,7 +10,6 @@
     <script src="js/index.js"></script>
     <script src="js/jquery.image_scroll.min.js"></script>
 
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
     <link rel="stylesheet" href="css/style.css">
@@ -20,20 +19,61 @@
   <body>
 
     <div class = "container">
+     <section>
     	<!--  Image scroller !-->
-    	<div id="scroller">
+    		  <header>
+    	    	<nav class="fixed">
+    	    	
+    	    	 <ul>
+    	    		<li><a id="modal_trigger" href="#modal">Log In</a></li>
+					<!-- <li><a href="#">About</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Team</a></li>
+					<li><a href="#">Contact</a></li>
+					!-->
+				      </ul>
+    	    	</nav>
+    	   </header>
+     
+
+    	   <div id="scroller">
+    	   
+
     	    	<div class = "space active"></div>
     	    	<div class = "e1"></div>
     	    	<div class = "e2"></div>
     	    	
-					
-    	    	
-    	</div>
-    
-<a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a>
+    	   </div>
+      </section>
+	 <!-- Popup overlay !-->
+	 <section>
+<footer>
 
-<!-- Popup overlay !-->
-<div id="modal" class="popupContainer" style="display:none;">
+  <div class="footer-message">
+
+    <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Contact</a></li>
+    </ul>
+    
+    <p>2015 Pinpoint Prize
+      <br>
+
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Private Policy</a>
+          <a href="#">Fees & Charges</a>
+
+    </p>
+    
+    
+  </div>
+
+</footer>
+
+</section>
+		<div id="modal" class="popupContainer" style="display:none;">
   <section class="popupBody">
     <div class="logmod">
   <div class="logmod__wrapper">
@@ -154,4 +194,4 @@
   </script>    
     </section>
     </div>
-  </div>
+  	</div>
