@@ -5,74 +5,80 @@
     <meta charset="UTF-8">
     <title>Login/Sign-Up</title>
     
-    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
     <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/jquery.image_scroll.min.js"></script>
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home.css">
-  
+    
+     
   </head>
   <body>
 
-    <div class = "container">
+    <!-- Login and picture scroller !-->
      <section>
     	<!--  Image scroller !-->
-    		  <header>
-    	    	<nav class="fixed">
-    	    	
-    	    	 <ul>
-    	    		<li><a id="modal_trigger" href="#modal">Log In</a></li>
+    	    	<nav class="navbar navbar-default navbar-fixed-top fixed">
+    	    		<div class="container-fluid">
+    	    	 	<a href="#" class="navbar-brand">Lorem Ipsum</a>
+    	    		<a id="modal_trigger" href="#modal" class="btn btn-default navbar-btn navbar-right">Log In</a>
 					<!-- <li><a href="#">About</a></li>
 					<li><a href="#">Services</a></li>
 					<li><a href="#">Team</a></li>
 					<li><a href="#">Contact</a></li>
 					!-->
-				      </ul>
+					</div>
     	    	</nav>
-    	   </header>
      
 
     	   <div id="scroller">
     	   
 
-    	    	<div class = "space active"></div>
+    	    	<div class = "space active"><h3>Hello </h3></div>
     	    	<div class = "e1"></div>
     	    	<div class = "e2"></div>
     	    	
+    	    	
+    	    	
+    	    	
     	   </div>
       </section>
+	
+	<!-- Footer !-->
+
+		<footer>
+
+  			<div class="footer-message">
+
+   			 <ul>
+         			 <li><a href="#">About</a></li>
+          			 <li><a href="#">Services</a></li>
+          			 <li><a href="#">Team</a></li>
+          			 <li><a href="#">Contact</a></li>
+    		 </ul>
+    
+    			<p>Devon Jacobs 2015
+     			 <br>
+
+          			<a href="#">Terms & Conditions</a>
+          			<a href="#">Private Policy</a>
+          			<a href="#">Fees & Charges</a></p>
+    
+    
+  			</div>
+
+
+	</section>
 	 <!-- Popup overlay !-->
-	 <section>
-<footer>
-
-  <div class="footer-message">
-
-    <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Contact</a></li>
-    </ul>
-    
-    <p>2015 Pinpoint Prize
-      <br>
-
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Private Policy</a>
-          <a href="#">Fees & Charges</a>
-
-    </p>
-    
-    
-  </div>
-
-</footer>
-
-</section>
 		<div id="modal" class="popupContainer" style="display:none;">
   <section class="popupBody">
     <div class="logmod">
@@ -152,7 +158,6 @@
               <div class="input full">
                 <label class="string optional" for="user-pw">Password *</label>
                 <input class="string optional" maxlength="255" id="user-pw" placeholder="Password" type="password" name = "password" size="50" />
-                						<span class="hide-password">Show</span>
               </div>
             </div>
             <div class="simform__actions">
@@ -188,10 +193,9 @@
   </div>
 
     <script src="js/index.js"></script>
-
-    <script type="text/javascript">
+ 	<script type="text/javascript">
   		$("#modal_trigger").leanModal({top : 200, overlay : 0.6, closeButton: ".logmod__close" });
-  </script>    
+  </script>  
     </section>
     </div>
-  	</div>
+  	

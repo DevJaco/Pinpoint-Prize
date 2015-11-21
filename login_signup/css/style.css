@@ -1,10 +1,16 @@
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+a {
+
+text-decoration: none;
+  }
 
 .logmod {
   display: block;
@@ -534,6 +540,7 @@ html {
 }
 .btn.deep-orange:active, .simform__actions .deep-orange.sumbit:active, .btn.deep-orange:focus, .simform__actions .deep-orange.sumbit:focus {
   background-color: #f33a00;
+
 }
 .btn.deep-orange:hover, .simform__actions .deep-orange.sumbit:hover {
   background-color: #ff4408;
@@ -589,6 +596,8 @@ html {
 }
 .special:hover {
   transition: all 0.15s ease-out;
+    color: #f00;
+    text-decoration: none;
 }
 .special:hover:before {
   visibility: visible;
@@ -649,6 +658,8 @@ html {
 }
 .special_term:hover {
   transition: all 0.15s ease-out;
+  text-decoration: none;
+  color: #f00;
 }
 .special_term:hover:before {
   visibility: visible;

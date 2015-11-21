@@ -269,6 +269,10 @@ private function login($email, $password){
 						json($_SESSION['error_msg']);
 		}
 	}
+	else {
+		$_SESSION['error_msg'] = "Incorrect email or password. <strong>Please try again<strong>";
+		json($_SESSION['error_msg']);
+	}
 }
 	
 	
